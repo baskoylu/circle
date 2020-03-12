@@ -23,7 +23,7 @@ read PROCEED
 if [ $PROCEED == "y" ]; then
         # check computers 5-8 for the video folders and download them.
         for cam in "${cams[@]}"; do
-                scp -r files@flv-b${cam}.mit.edu:C:/users/flave/desktop/$1/$2 /mnt/x/experiments/
+                scp -r files@flv-b${cam}.mit.edu:C:/users/flave/desktop/$1/$2 /mnt/x/circle_data_local/
         done
 fi
 
