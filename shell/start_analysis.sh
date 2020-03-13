@@ -49,4 +49,4 @@ fi
 
 # 4. Copy over folders containing video files and new fields.mat files
 echo "Copying $2 to cluster"
-rsync -arv -P /mnt/x/circle_data_local/$1 $USER@openmind.mit.edu:/om2/user/$USER/data/circle_data_cluster
+rsync -arv -P /mnt/x/circle_data_local/$2 $USER@openmind.mit.edu:/om2/user/$USER/data/circle_data_cluster
