@@ -7,10 +7,10 @@ echo "Copy files from cluster local drive? (y/n)"
 PROCEED="n"
 read PROCEED
 if [ $PROCEED == "y" ]; then
-        echo "Copying .linkedTracks and .stim files to local G:/ drive."
+        echo "Copying .linkedTracks and .stim files to local X:/ drive."
         for folder in /mnt/x/circle_data_local/$date/*; do
                 prefix=${folder##*/}
-                scp $USER@openmind.mit.edu:/om/user/$USER/data/circle_data_cluster/$date/$prefix/${prefix}.linkedTracks.mat $folder
+		scp $USER@openmind.mit.edu:/om2/user/$USER/data/circle_data_cluster/$date/$prefix/${prefix}.linkedTracks.mat $folder
                 cp /mnt/c/users/$user/documents/stimfiles/$date/${prefix}.stim $folder
         done
 fi
