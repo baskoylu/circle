@@ -9,4 +9,9 @@ sudo cp ~/circle/shell/finish_analysis.sh /bin/
 echo
 echo "Great. Now you can just type in, for example, 'start_analysis.sh <date> <username>' without referencing the path to the script file."
 echo "Good job."
+# Now move measureCam files into circle_data_local
+for file in ~/circle/measure/*;
+do
+	cp $file /mnt/x/circle_data_local/
+done
 echo
